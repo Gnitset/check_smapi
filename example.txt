@@ -1,0 +1,22 @@
+$ curl http://10.0.1.22:4343/smapi/status
+OK/info/build: 02a5e64
+OK/info/pid: 31668
+OK/info/port: 80
+OK/info/start_time: 2014-04-25 13:36:25 +0000
+OK/prod/xxmmzz_ff: mountpoint:/xxyyzz
+
+$ curl http://10.0.1.22:4141/xxyyzz/smapi/status
+OK/db_alive/xxxx
+OK/db_alive/yyyy
+OK/db_alive/zzzz
+
+$ curl http://10.0.1.22:4141/xxyyzz/smapi/db_alive/
+OK/db_alive/yyyy
+
+$ curl http://10.0.1.22:4141/xxyyzz/smapi/db_alive/
+OK/db_alive/xxxx
+
+$ curl http://10.0.1.22:4141/xxyyzz/smapi/db_alive/all
+OK/db_alive/xxxx
+OK/db_alive/yyyy
+OK/db_alive/zzzz
